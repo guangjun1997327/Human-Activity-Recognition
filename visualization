@@ -1,0 +1,145 @@
+import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+x = [i for i in range(0,20000)]
+y = testdata['label'][:20000]
+y1 = testdata['gyro_x'][:20000]
+y2 = testdata['gyro_y'][:20000]
+y3 = testdata['gyro_z'][:20000]
+y4 = testdata['acc_x'][:20000]
+y5 = testdata['acc_y'][:20000]
+y6 = testdata['acc_z'][:20000]
+#y = np.loadtxt('/content/drive/MyDrive/HAPT_dataset/HAPT Data Set/Test/y_test.txt')[:200]
+#print(y.shape)
+plt.figure(figsize=(60,15))
+plt.subplot(3,1,1)
+plt.plot(x, y1, label='gyro_x')
+plt.plot(x, y2, label='gyro_y')
+plt.plot(x, y3, label='gyro_z')
+plt.legend()
+
+for i in range(len(x)):
+
+    if y[i]==1:
+      plt.axvspan(i,i+1, facecolor='red', alpha=0.5)
+    elif y[i]==2:
+      plt.axvspan(i,i+1, facecolor='orange', alpha=0.5)
+    elif y[i]==3:
+      plt.axvspan(i,i+1, facecolor='yellow', alpha=0.5)
+    elif y[i]==4:
+      plt.axvspan(i,i+1, facecolor='green', alpha=0.5)
+    elif y[i]==5:
+      plt.axvspan(i,i+1, facecolor='blue', alpha=0.5)
+    elif y[i]==6:
+      plt.axvspan(i,i+1, facecolor='lime', alpha=0.5)
+    elif y[i]==7:
+      plt.axvspan(i,i+1, facecolor='lightgreen', alpha=0.3)
+    elif y[i]==8:
+      plt.axvspan(i,i+1, facecolor='black', alpha=0.5)
+    elif y[i]==9:
+      plt.axvspan(i,i+1, facecolor='darkred', alpha=0.5)
+    elif y[i]==10:
+      plt.axvspan(i,i+1, facecolor='grey', alpha=0.5)
+    elif y[i]==11:
+      plt.axvspan(i,i+1, facecolor='cyan', alpha=0.5)
+    elif y[i]==12:
+      plt.axvspan(i,i+1, facecolor='pink', alpha=0.5)  
+     # plt.plot(x, y, label='to')    
+
+      
+
+
+#matplotlib.rcParams.update({'font.size':24 }) # 改变所有字体大小，改变其他性质类似
+
+plt.subplot(3,1,2)
+
+plt.plot(x, y4, label='acc_x')
+plt.plot(x, y5, label='acc_y')
+plt.plot(x, y6, label='acc_z')
+plt.legend()
+
+for i in range(len(x)):
+
+    if y[i]==1:
+      plt.axvspan(i,i+1, facecolor='red', alpha=0.5)
+    elif y[i]==2:
+      plt.axvspan(i,i+1, facecolor='orange', alpha=0.5)
+    elif y[i]==3:
+      plt.axvspan(i,i+1, facecolor='yellow', alpha=0.5)
+    elif y[i]==4:
+      plt.axvspan(i,i+1, facecolor='green', alpha=0.5)
+    elif y[i]==5:
+      plt.axvspan(i,i+1, facecolor='blue', alpha=0.5)
+    elif y[i]==6:
+      plt.axvspan(i,i+1, facecolor='lime', alpha=0.5)
+    elif y[i]==7:
+      plt.axvspan(i,i+1, facecolor='lightgreen', alpha=0.3)
+    elif y[i]==8:
+      plt.axvspan(i,i+1, facecolor='black', alpha=0.5)
+    elif y[i]==9:
+      plt.axvspan(i,i+1, facecolor='darkred', alpha=0.5)
+    elif y[i]==10:
+      plt.axvspan(i,i+1, facecolor='grey', alpha=0.5)
+    elif y[i]==11:
+      plt.axvspan(i,i+1, facecolor='cyan', alpha=0.5)
+    elif y[i]==12:
+      plt.axvspan(i,i+1, facecolor='pink', alpha=0.5)  
+# plt.plot(x, y, label='to')  
+#y2 = np.random.randn(3162)
+#plt.plot(x, y, label='to')
+#plt.plot(x, y2, label='from')
+
+#将x轴置空
+
+plt.xticks(x,())
+plt.subplot(3,1,3)
+z = [ i for i in range(1,13)]
+plt.xticks((0,1,2,3,4,5,6,7,8,9,10,11),('1 WALKING','2 WALKING_UPSTAIRS','3 WALKING_DOWNSTAIRS','4 SITTING','5 STANDING','6 LAYING','7 STAND_TO_SIT ','8 SIT_TO_STAND','9 SIT_TO_LIE','10 LIE_TO_SIT','11 STAND_TO_LIE','12 LIE_TO_STAND'))
+for i in range(12):
+  if z[i]==1:
+      plt.axvspan(i,i+1, facecolor='red', alpha=0.5)
+  elif z[i]==2:
+      plt.axvspan(i,i+1, facecolor='orange', alpha=0.5)
+  elif z[i]==3:
+      plt.axvspan(i,i+1, facecolor='yellow', alpha=0.5)
+  elif z[i]==4:
+      plt.axvspan(i,i+1, facecolor='green', alpha=0.5)
+  elif z[i]==5:
+      plt.axvspan(i,i+1, facecolor='blue', alpha=0.5)
+  elif z[i]==6:
+      plt.axvspan(i,i+1, facecolor='lime', alpha=0.5)
+  elif z[i]==7:
+      plt.axvspan(i,i+1, facecolor='lightgreen', alpha=0.3)
+  elif z[i]==8:
+      plt.axvspan(i,i+1, facecolor='black', alpha=0.5)
+  elif z[i]==9:
+      plt.axvspan(i,i+1, facecolor='darkred', alpha=0.5)
+  elif z[i]==10:
+      plt.axvspan(i,i+1, facecolor='grey', alpha=0.5)
+  elif z[i]==11:
+      plt.axvspan(i,i+1, facecolor='cyan', alpha=0.5)
+  elif z[i]==12:
+      plt.axvspan(i,i+1, facecolor='pink', alpha=0.5)  
+     # plt.plot(x, y, label='to')    
+
+#用需要的数据将x轴替换为需要的数据
+
+# plt.xticks((0,31,76,101,119), ('1 WALKING','2 WALKING_UPSTAIRS','3 WALKING_DOWNSTAIRS','4 SITTING','5 STANDING','6 LAYING','7 STAND_TO_SIT ','8 SIT_TO_STAND','9 SIT_TO_LIE','10 LIE_TO_SIT','11 STAND_TO_LIE','12 LIE_TO_STAND'))
+# # 垂直填充
+# plt.axvspan(0,31, facecolor='r', alpha=0.5)
+# plt.axvspan(31,76, facecolor='orange', alpha=0.5)
+# #plt.axvspan(76,101, facecolor='w', alpha=0.5)
+# # plt.axvspan(101,119, facecolor='b', alpha=0.5)
+# # plt.axvspan(119,129, facecolor='pink', alpha=0.5)
+# # plt.axvspan(129,139, facecolor='green', alpha=0.5)
+# # plt.axvspan(139,149, facecolor='violet', alpha=0.5)
+# # plt.axvspan(149,159, facecolor='yellow', alpha=0.5)
+# # plt.axvspan(159,169, facecolor='grey', alpha=0.5)
+# # plt.axvspan(169,179, facecolor='darkblue', alpha=0.5)
+# # plt.axvspan(179,189, facecolor='darkgreen', alpha=0.5)
+# # plt.axvspan(189,199, facecolor='lightgreen', alpha=0.5)
+
+#
+#
+plt.savefig('./01.pdf')
+plt.show()
