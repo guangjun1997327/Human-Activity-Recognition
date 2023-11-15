@@ -1,4 +1,4 @@
-Uni Stuttgart ISS License
+Uni Stuttgart License
 
 Copyright (c) [2022] [Guangjun]
 
